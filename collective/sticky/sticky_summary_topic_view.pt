@@ -16,12 +16,15 @@
         <h2>Featured Stories</h2>
         <metal:block use-macro="context/folder_summary_view/macros/listing" />
         <p>&nbsp;</p>
-        <h2>Recent News</h2>
       </div>
 
-      <tal:block tal:define="folderContents python:context.queryCatalog(is_sticky=False)">
+      <div class="items"
+           tal:define="folderContents python:context.queryCatalog(is_sticky=False)"
+           tal:condition="folderContents">
+        <h2>Recent News</h2>
         <metal:block use-macro="context/folder_summary_view/macros/listing" />
-      </tal:block>
+        <p>&nbsp;</p>
+      </div>
 
     </metal:content-core>
 
