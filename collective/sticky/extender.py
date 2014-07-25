@@ -4,7 +4,7 @@ from archetypes.schemaextender.interfaces import ISchemaExtender, IBrowserLayerA
 from archetypes.schemaextender.field import ExtensionField
 from plone.indexer import indexer
 from Products.Archetypes import atapi
-from Products.ATContentTypes.interfaces import IATNewsItem
+from Products.ATContentTypes.interfaces import IATNewsItem, IATEvent
 from collective.sticky.interfaces import IBrowserLayer
 
 
@@ -12,11 +12,13 @@ class CheckboxField(ExtensionField, atapi.BooleanField):
     pass
 
 
-class StickySchemaExtender(object):
+class StickyBaseSchemaExtender(object):
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
-    adapts(IATNewsItem)
 
     layer = IBrowserLayer
+
+    def __init__(self, context):
+        pass
 
     _fields = [CheckboxField('sticky',
         schemata='categorization',
@@ -26,22 +28,39 @@ class StickySchemaExtender(object):
         default=False,
         )]
 
-    def __init__(self, context):
-        if context.portal_type != 'News Item':
-            return
-        self.context = context
-
     def getFields(self):
         return self._fields
 
 
+class StickyNewsSchemaExtender(StickyBaseSchemaExtender):
+    adapts(IATNewsItem)
+
+
 @indexer(IATNewsItem)
-def sticky_sort(context):
+def sticky_sort_news(context):
     date = context.getField('effectiveDate').get(context)
     if date is None:
         date = context.getField('creation_date').get(context)
     return (context.getField('sticky').get(context), date.timeTime())
 
+
 @indexer(IATNewsItem)
-def is_sticky(context):
+def is_sticky_news(context):
+    return context.getField('sticky').get(context)
+
+
+class StickyEventSchemaExtender(StickyBaseSchemaExtender):
+    adapts(IATEvent)
+
+
+@indexer(IATEvent)
+def sticky_sort_event(context):
+    date = context.getField('effectiveDate').get(context)
+    if date is None:
+        date = context.getField('creation_date').get(context)
+    return (context.getField('sticky').get(context), date.timeTime())
+
+
+@indexer(IATEvent)
+def is_sticky_event(context):
     return context.getField('sticky').get(context)

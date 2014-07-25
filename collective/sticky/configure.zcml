@@ -10,7 +10,16 @@
   <browser:page
      for="Products.ATContentTypes.interfaces.IATTopic"
      name="sticky_summary_view"
-     template="sticky_summary_view.pt"
+     template="sticky_summary_topic_view.pt"
+     permission="zope2.View"
+     layer=".interfaces.IBrowserLayer"
+     />
+
+  <browser:page
+     for="plone.app.collection.interfaces.ICollection"
+     name="sticky_summary_view"
+     class=".collection.StickyCollectionView"
+     template="sticky_summary_collection_view.pt"
      permission="zope2.View"
      layer=".interfaces.IBrowserLayer"
      />
@@ -23,8 +32,11 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-  <adapter factory=".extender.StickySchemaExtender" provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
-  <adapter factory=".extender.sticky_sort" name="sticky_sort" />
-  <adapter factory=".extender.is_sticky" name="is_sticky" />
+  <adapter factory=".extender.StickyNewsSchemaExtender" provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
+  <adapter factory=".extender.StickyEventSchemaExtender" provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
+  <adapter factory=".extender.sticky_sort_news" name="sticky_sort" />
+  <adapter factory=".extender.sticky_sort_event" name="sticky_sort" />
+  <adapter factory=".extender.is_sticky_news" name="is_sticky" />
+  <adapter factory=".extender.is_sticky_event" name="is_sticky" />
 
 </configure>
