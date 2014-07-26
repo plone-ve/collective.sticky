@@ -27,6 +27,16 @@
      layer=".interfaces.IBrowserLayer"
      />
 
+  <browser:menuItem
+     for="plone.app.collection.interfaces.ICollection"
+     menu="plone_displayviews"
+     title="Sticky summary view"
+     action="@@sticky_summary_view"
+     description=""
+     i18n:attributes="title"
+     layer=".interfaces.IBrowserLayer"
+    />
+
   <gs:registerProfile
       name="default"
       title="collective.sticky"

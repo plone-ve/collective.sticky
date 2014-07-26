@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-26 08:27+0000\n"
+"POT-Creation-Date: 2014-07-26 08:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,6 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.sticky\n"
 
-#: collective/sticky/extender.py:28
-msgid "Should this page be \"sticky\" and appear at the top of sticky-aware collections?"
-msgstr ""
-
 #: collective/sticky/configure.zcml:33
 msgid "Sticky summary view"
 msgstr ""
-
-#. Default: "Featured ${items}"
-#: collective/sticky/sticky_summary_collection_view.pt:17
-#: collective/sticky/sticky_summary_topic_view.pt:16
-msgid "featured_items"
-msgstr ""
-
-#. Default: "Recent ${items}"
-#: collective/sticky/sticky_summary_collection_view.pt:25
-#: collective/sticky/sticky_summary_topic_view.pt:24
-msgid "other_items"
-msgstr ""
-
