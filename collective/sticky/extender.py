@@ -5,6 +5,8 @@ from archetypes.schemaextender.field import ExtensionField
 from plone.indexer import indexer
 from Products.Archetypes import atapi
 from Products.ATContentTypes.interfaces import IATNewsItem, IATEvent
+
+from collective.sticky import _
 from collective.sticky.interfaces import IBrowserLayer
 
 
@@ -23,7 +25,7 @@ class StickyBaseSchemaExtender(object):
     _fields = [CheckboxField('sticky',
         schemata='categorization',
         widget=atapi.BooleanWidget(
-            label='Should this page be "sticky" and appear at the top of sticky-aware collections?',
+            label=_('Should this page be "sticky" and appear at the top of sticky-aware collections?'),
             ),
         default=False,
         )]

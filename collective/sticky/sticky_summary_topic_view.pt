@@ -4,7 +4,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="collective.sticky">
 
 <body>
 
@@ -13,7 +13,7 @@
       <div class="sticky-items"
            tal:define="folderContents python:context.queryCatalog(is_sticky=True)"
            tal:condition="folderContents">
-        <h2>Featured Stories</h2>
+        <h2 i18n:translate="featured_items">Featured <span tal:content="context/Title" i18n:name="items" /></h2>
         <metal:block use-macro="context/folder_summary_view/macros/listing" />
         <p>&nbsp;</p>
       </div>
@@ -21,7 +21,7 @@
       <div class="items"
            tal:define="folderContents python:context.queryCatalog(is_sticky=False)"
            tal:condition="folderContents">
-        <h2>Recent News</h2>
+        <h2 i18n:translate="other_items">Recent <span tal:content="context/Title" i18n:name="items" /></h2>
         <metal:block use-macro="context/folder_summary_view/macros/listing" />
         <p>&nbsp;</p>
       </div>
