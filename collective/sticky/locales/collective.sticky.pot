@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-26 08:27+0000\n"
+"POT-Creation-Date: 2014-07-26 08:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Should this page be \"sticky\" and appear at the top of sticky-aware collections?"
 msgstr ""
 
-#: collective/sticky/configure.zcml:33
+#: collective/sticky/configure.zcml:26
 msgid "Sticky summary view"
 msgstr ""
 

@@ -17,6 +17,6 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.sticky\n"
 
-#: collective/sticky/configure.zcml:33
+#: collective/sticky/configure.zcml:26
 msgid "Sticky summary view"
 msgstr ""

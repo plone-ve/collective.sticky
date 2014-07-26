@@ -8,8 +8,10 @@
   <!-- Include configuration for dependencies listed in setup.py -->
   <includeDependencies package="." />
 
+  <!-- Translations -->
   <i18n:registerTranslations directory="locales" />
 
+  <!-- Topics -->
   <browser:page
      for="Products.ATContentTypes.interfaces.IATTopic"
      name="sticky_summary_view"
@@ -18,6 +20,17 @@
      layer=".interfaces.IBrowserLayer"
      />
 
+  <browser:menuItem
+     for="Products.ATContentTypes.interfaces.IATTopic"
+     menu="plone_displayviews"
+     title="Sticky summary view"
+     action="@@sticky_summary_view"
+     description=""
+     i18n:attributes="title"
+     layer=".interfaces.IBrowserLayer"
+    />
+
+  <!-- Collections -->
   <browser:page
      for="plone.app.collection.interfaces.ICollection"
      name="sticky_summary_view"
@@ -37,6 +50,7 @@
      layer=".interfaces.IBrowserLayer"
     />
 
+  <!-- Profile -->
   <gs:registerProfile
       name="default"
       title="collective.sticky"
@@ -45,6 +59,7 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <!-- Extender -->
   <adapter factory=".extender.StickyNewsSchemaExtender" provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
   <adapter factory=".extender.StickyEventSchemaExtender" provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
   <adapter factory=".extender.sticky_sort_news" name="sticky_sort" />

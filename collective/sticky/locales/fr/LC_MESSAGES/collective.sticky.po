@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2014-07-26 08:27+0000\n"
+"POT-Creation-Date: 2014-07-26 08:38+0000\n"
 "PO-Revision-Date: 2014-05-06 11:41+0000\n"
 "Last-Translator: support@communesplone.org\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Should this page be \"sticky\" and appear at the top of sticky-aware collections?"
 msgstr "Est-ce que cet élément doit être épinglé et apparaître au-dessus dans les résultats des collections configurées pour?"
 
-#: collective/sticky/configure.zcml:33
+#: collective/sticky/configure.zcml:26
 msgid "Sticky summary view"
 msgstr "Vue sommaire avec éléments épinglés"
 
@@ -34,3 +34,4 @@ msgstr "Epinglé"
 #: collective/sticky/sticky_summary_topic_view.pt:24
 msgid "other_items"
 msgstr "Autres ${items}"
+
