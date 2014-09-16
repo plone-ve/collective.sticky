@@ -59,6 +59,16 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <!-- Upgrades -->
+  <gs:upgradeStep
+      title="collective.sticky: upgrade to v2"
+      description="Fix sort order, add new sort criteria and reindex"
+      handler=".upgrades.upgrade_to_two"
+      source="1"
+      destination="2"
+      profile="collective.sticky:default"
+      />
+
   <!-- Extender -->
   <adapter factory=".extender.StickyNewsSchemaExtender" provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
   <adapter factory=".extender.StickyEventSchemaExtender" provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
