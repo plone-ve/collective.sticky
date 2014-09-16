@@ -4,7 +4,9 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix sort order calculation : sticky elements should be above non-sticky
+  elements
+  [laulaz]
 
 
 1.0 (2014-08-26)

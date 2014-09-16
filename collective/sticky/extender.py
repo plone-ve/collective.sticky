@@ -43,7 +43,11 @@ def sticky_sort_news(context):
     date = context.getField('effectiveDate').get(context)
     if date is None:
         date = context.getField('creation_date').get(context)
-    return (context.getField('sticky').get(context), date.timeTime())
+    # A sticky element should be above a non sticky element
+    if context.getField('sticky').get(context):
+        return (1, date.timeTime())
+    else:
+        return (2, date.timeTime())
 
 
 @indexer(IATNewsItem)
@@ -58,7 +62,11 @@ class StickyEventSchemaExtender(StickyBaseSchemaExtender):
 @indexer(IATEvent)
 def sticky_sort_event(context):
     date = context.getField('startDate').get(context)
-    return (context.getField('sticky').get(context), date.timeTime())
+    # A sticky element should be above a non sticky element
+    if context.getField('sticky').get(context):
+        return (1, date.timeTime())
+    else:
+        return (2, date.timeTime())
 
 
 @indexer(IATEvent)
