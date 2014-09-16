@@ -62,7 +62,7 @@
   <!-- Upgrades -->
   <gs:upgradeStep
       title="collective.sticky: upgrade to v2"
-      description="Fix sort order, add new sort criteria and reindex"
+      description="Add sort criteria on new-style collection"
       handler=".upgrades.upgrade_to_two"
       source="1"
       destination="2"

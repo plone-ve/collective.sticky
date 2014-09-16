@@ -6,9 +6,6 @@ Changelog
 
 - Add sticky sort on new style collections
   [laulaz]
-- Fix sort order calculation : sticky elements should be above non-sticky
-  elements
-  [laulaz]
 
 
 1.0 (2014-08-26)
