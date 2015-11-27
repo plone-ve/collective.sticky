@@ -4,7 +4,8 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix zcml: ImportError: Couldn't import plone_displayviews 
+  [bsuttor]
 
 
 1.0.2 (2015-11-26)
