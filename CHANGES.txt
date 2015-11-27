@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.3 (unreleased)
+1.0.3 (2015-11-27)
 ------------------
 
 - Fix zcml: ImportError: Couldn't import plone_displayviews 
