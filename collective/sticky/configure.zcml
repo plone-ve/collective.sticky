@@ -8,6 +8,8 @@
   <!-- Include configuration for dependencies listed in setup.py -->
   <includeDependencies package="." />
 
+  <include package="plone.app.contentmenu" />
+
   <!-- Translations -->
   <i18n:registerTranslations directory="locales" />
 
