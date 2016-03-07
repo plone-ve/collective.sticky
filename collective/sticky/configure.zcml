@@ -52,6 +52,26 @@
      layer=".interfaces.IBrowserLayer"
     />
 
+  <!-- Dexterity -->
+  <browser:page
+     for="plone.app.contenttypes.interfaces.ICollection"
+     name="sticky_summary_view"
+     class=".collection.StickyCollectionView"
+     template="sticky_summary_collection_view.pt"
+     permission="zope2.View"
+     layer=".interfaces.IBrowserLayer"
+     />
+
+  <browser:menuItem
+     for="plone.app.contenttypes.interfaces.ICollection"
+     menu="plone_displayviews"
+     title="Sticky summary view"
+     action="@@sticky_summary_view"
+     description=""
+     i18n:attributes="title"
+     layer=".interfaces.IBrowserLayer"
+    />
+
   <!-- Profile -->
   <gs:registerProfile
       name="default"
@@ -72,8 +92,12 @@
       />
 
   <!-- Extender -->
-  <adapter factory=".extender.StickyNewsSchemaExtender" provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
-  <adapter factory=".extender.StickyEventSchemaExtender" provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
+  <adapter
+    factory=".extender.StickyNewsSchemaExtender"
+    provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
+  <adapter
+    factory=".extender.StickyEventSchemaExtender"
+    provides="archetypes.schemaextender.interfaces.ISchemaExtender" />
   <adapter factory=".extender.sticky_sort_news" name="sticky_sort" />
   <adapter factory=".extender.sticky_sort_event" name="sticky_sort" />
   <adapter factory=".extender.is_sticky_news" name="is_sticky" />
