@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 
 version = '1.0.4.dev0'
@@ -10,14 +11,14 @@ setup(name='collective.sticky',
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        "Framework :: Plone",
-        "Programming Language :: Python",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        ],
-      keywords='',
+          "Framework :: Plone",
+          "Programming Language :: Python",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+      ],
+      keywords='Plone Zope Sticky',
       author='',
       author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      url='http://github.com/imio/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],
@@ -26,10 +27,11 @@ setup(name='collective.sticky',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'plone.api',
       ],
-      entry_points="""
-      # -*- Entry points: -*-
-      [z3c.autoinclude.plugin]
-      target = plone
-      """,
+      extras_require={
+          'test': [
+              'plone.app.testing',
+          ]
+      },
       )
