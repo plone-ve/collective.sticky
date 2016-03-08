@@ -5,7 +5,7 @@ version = '1.0.4.dev0'
 
 setup(name='collective.sticky',
       version=version,
-      description="Example Add-on",
+      description="Collective sticky package",
       long_description=open("README.rst").read() + "\n" +
                        open("CHANGES.txt").read(),
       # Get more strings from
