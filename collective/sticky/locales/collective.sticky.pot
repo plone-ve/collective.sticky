@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-26 08:38+0000\n"
+"POT-Creation-Date: 2016-03-08 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,41 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.sticky\n"
 
+#: collective/sticky/configure.zcml:85
+msgid "Adds a sticky field"
+msgstr ""
+
+#: collective/sticky/configure.zcml:99
+msgid "Allows news items to be marked as 'sticky' so they appear at the top of collections."
+msgstr ""
+
+#: collective/sticky/behavior.py:27
 #: collective/sticky/extender.py:28
 msgid "Should this page be \"sticky\" and appear at the top of sticky-aware collections?"
 msgstr ""
 
-#: collective/sticky/configure.zcml:26
+#: collective/sticky/behavior.py:21
+msgid "Sticky"
+msgstr ""
+
+#: collective/sticky/configure.zcml:85
+msgid "Sticky Behavior"
+msgstr ""
+
+#: collective/sticky/configure.zcml:35
 msgid "Sticky summary view"
+msgstr ""
+
+#: collective/sticky/configure.zcml:107
+msgid "Uninstall 'sticky' params."
+msgstr ""
+
+#: collective/sticky/configure.zcml:99
+msgid "collective.sticky"
+msgstr ""
+
+#: collective/sticky/configure.zcml:107
+msgid "collective.sticky.uninstall"
 msgstr ""
 
 #. Default: "Featured ${items}"
@@ -36,4 +65,3 @@ msgstr ""
 #: collective/sticky/sticky_summary_topic_view.pt:24
 msgid "other_items"
 msgstr ""
-
