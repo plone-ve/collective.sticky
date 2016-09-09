@@ -24,7 +24,8 @@ class ISticky(model.Schema):
 
     sticky = schema.Bool(
         title=_(u'Sticky'),
-        description=_(u'Should this page be "sticky" and appear at the top of sticky-aware collections?'),
+        description=_(
+            u'Should this page be "sticky" and appear at the top of sticky-aware collections?'),
         required=False,
         default=False,
     )
@@ -42,7 +43,7 @@ def sticky_sort_news(context):
 @indexer(INewsItem)
 def is_sticky_news(context):
     if not ISticky.providedBy(context):
-        return
+        return ""
     return getattr(context, 'sticky', None)
 
 
@@ -55,5 +56,5 @@ def sticky_sort_event(context):
 @indexer(IEvent)
 def is_sticky_event(context):
     if not ISticky.providedBy(context):
-        return
+        return ""
     return getattr(context, 'sticky', None)
