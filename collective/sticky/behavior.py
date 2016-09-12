@@ -43,8 +43,8 @@ def sticky_sort_news(context):
 @indexer(INewsItem)
 def is_sticky_news(context):
     if not ISticky.providedBy(context):
-        return ""
-    return getattr(context, 'sticky', None)
+        raise AttributeError
+    return getattr(context, 'sticky', None) or False
 
 
 @indexer(IEvent)
@@ -56,5 +56,5 @@ def sticky_sort_event(context):
 @indexer(IEvent)
 def is_sticky_event(context):
     if not ISticky.providedBy(context):
-        return ""
-    return getattr(context, 'sticky', None)
+        raise AttributeError
+    return getattr(context, 'sticky', None) or False
