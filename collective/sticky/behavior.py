@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from collective.sticky import _
-from plone.app.contenttypes.interfaces import INewsItem, IEvent
+from plone.app.contenttypes.interfaces import IEvent
+from plone.app.contenttypes.interfaces import INewsItem
 from plone.autoform import directives as form
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.indexer import indexer
@@ -10,6 +11,8 @@ from plone.supermodel import model
 from z3c.form.browser.checkbox import SingleCheckBoxFieldWidget
 from zope import schema
 from zope.interface import provider
+
+import time
 
 
 @provider(IFormFieldProvider)
@@ -49,8 +52,9 @@ def is_sticky_news(context):
 
 @indexer(IEvent)
 def sticky_sort_event(context):
-    date = getattr(context, 'start_date', None)
-    return (getattr(context, 'sticky', None), date.timeTime())
+    date = getattr(context, 'start', None)
+    timetime = time.mktime(date.timetuple())
+    return (getattr(context, 'sticky', None), timetime)
 
 
 @indexer(IEvent)
