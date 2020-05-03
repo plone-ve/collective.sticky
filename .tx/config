@@ -1,0 +1,16 @@
+[main]
+host = https://www.transifex.com
+
+[plone-collective.collective-sticky-pot]
+file_filter = collective/sticky/locales/<lang>/LC_MESSAGES/collective.sticky.po
+minimum_perc = 0
+source_file = collective/sticky/locales/collective.sticky.pot
+source_lang = en
+type = PO
+
+[plone-collective.collective-sticky-plone-pot]
+file_filter = collective/sticky/locales/<lang>/LC_MESSAGES/plone.po
+minimum_perc = 0
+source_file = collective/sticky/locales/plone.pot
+source_lang = en
+type = PO
