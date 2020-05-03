@@ -4,6 +4,9 @@ Changelog
 1.1.3 (unreleased)
 ------------------
 
+- Added Spanish translation.
+  [macagua]
+
 - Updated gettext files support.
   [macagua]
 
