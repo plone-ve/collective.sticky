@@ -4,7 +4,8 @@ Changelog
 1.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Updated gettext files support.
+  [macagua]
 
 
 1.1.2 (2017-11-27)

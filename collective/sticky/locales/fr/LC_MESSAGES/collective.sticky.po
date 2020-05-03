@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2016-03-08 11:12+0000\n"
+"POT-Creation-Date: 2020-05-03 08:26+0000\n"
 "PO-Revision-Date: 2014-05-06 11:41+0000\n"
 "Last-Translator: support@communesplone.org\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,12 +23,12 @@ msgstr "Ajouté un champ sticky"
 msgid "Allows news items to be marked as 'sticky' so they appear at the top of collections."
 msgstr ""
 
-#: collective/sticky/behavior.py:27
+#: collective/sticky/behavior.py:30
 #: collective/sticky/extender.py:28
 msgid "Should this page be \"sticky\" and appear at the top of sticky-aware collections?"
 msgstr "Est-ce que cet élément doit être épinglé et apparaître au-dessus dans les résultats des collections configurées pour?"
 
-#: collective/sticky/behavior.py:21
+#: collective/sticky/behavior.py:24
 msgid "Sticky"
 msgstr "Sticky"
 

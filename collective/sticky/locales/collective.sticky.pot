@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-03-08 11:12+0000\n"
+"POT-Creation-Date: 2020-05-03 08:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,12 +25,12 @@ msgstr ""
 msgid "Allows news items to be marked as 'sticky' so they appear at the top of collections."
 msgstr ""
 
-#: collective/sticky/behavior.py:27
+#: collective/sticky/behavior.py:30
 #: collective/sticky/extender.py:28
 msgid "Should this page be \"sticky\" and appear at the top of sticky-aware collections?"
 msgstr ""
 
-#: collective/sticky/behavior.py:21
+#: collective/sticky/behavior.py:24
 msgid "Sticky"
 msgstr ""
 
